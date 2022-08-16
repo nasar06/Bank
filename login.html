@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="login.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-5xl font-bold text-center mt-10">
+            WELCOME TO THE <span class="text-emerald-500">My<span class="text-emerald-600">Bank</span></span>
+        </h1>
+    </header>
+    <main>
+        <section class="bg-violet-400 w-9/12 mx-auto mt-12 p-8 rounded-lg">
+            <h3 class="text-3xl font-bold mb-5">Please Login</h3>
+            <div>
+                <input class="w-9/12 block mb-5 p-2 rounded-lg" type="email" name="" id="getInputTxt"
+                    placeholder="type your Email">
+                <input class="w-9/12 block p-2 rounded-lg mb-5" type="password" name="" id="getInputPss"
+                    placeholder="type Your Password">
+                <button class="bg-emerald-500 font-semibold text-white px-5 py-2 rounded-lg" id="logBtn">Login</button>
+            </div>
+        </section>
+    </main>
+    <script>
+        document.getElementById('logBtn').addEventListener('click', function () {
+            const email = document.getElementById('getInputTxt');
+            const pass = document.getElementById('getInputPss');
+            if (email.value === 'nasar5847@gmail.com' && pass.value === 'nasar1928') {
+                console.log('you are login')
+            }
+            else {
+                console.log('you are not login')
+            }
+        })
+    </script>
+</body>
+
+</html>
