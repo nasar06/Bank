@@ -6,6 +6,12 @@ document.getElementById('btn-deposit').addEventListener('click', function () {
     const newDepositAmountString = newDepositInput.value;
     const newDepositAmount = parseFloat(newDepositAmountString);
 
+    //get not a number you can error
+    if(isNaN(newDepositAmount)){
+        alert('please put the Number');
+        return;
+    }
+
     //get rest deposit amount
     const restDepositInput = document.getElementById('deposit-total');
     const restDepositAmountString = restDepositInput.innerText;
@@ -33,6 +39,12 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
     const newWithdrawInput = document.getElementById('withdraw-field');
     const newWithdrawString = newWithdrawInput.value;
     const newWidrawAmount = parseFloat(newWithdrawString);
+
+    //get not a number you can error
+    if(isNaN(newWidrawAmount)){
+        alert('please put the Number');
+        return;
+    }
 
     //get withdraw Total Amount
     const restWithdrawElement = document.getElementById('withdraw-total');
